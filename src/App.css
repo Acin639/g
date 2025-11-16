@@ -1,0 +1,96 @@
+/* Global Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#root{height:100%}
+body{font-family: 'Helvetica Neue', Arial, sans-serif;background:#000;color:#fff}
+
+.hero{
+  position:relative;
+  min-height:100vh;
+  background-image: url('/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.85) brightness(0.5);
+  display:flex;
+  flex-direction:column;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.65) 40%, rgba(0,0,0,0.9) 100%);
+  pointer-events:none;
+}
+
+.topbar{
+  position:relative;
+  z-index:3;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:28px 48px;
+}
+
+.logo{
+  font-weight:800;
+  color:#e50914;
+  font-size:36px;
+  letter-spacing:2px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.controls{display:flex;gap:12px;align-items:center}
+.controls button{background:transparent;border:1px solid rgba(255,255,255,0.2);padding:10px 14px;border-radius:4px;color:#fff;cursor:pointer}
+.signin{background:#e50914;border:none;padding:10px 18px;border-radius:4px}
+
+.hero-content{
+  z-index:3;
+  margin:auto;
+  text-align:center;
+  padding:0 24px;
+  max-width:1000px;
+}
+
+.headline{
+  font-size:64px;
+  font-weight:800;
+  margin-bottom:14px;
+  text-shadow: 0 6px 30px rgba(0,0,0,0.6);
+}
+
+.sub{font-size:20px;margin-bottom:10px;opacity:0.95}
+.sub2{margin-bottom:22px;opacity:0.95}
+
+.email-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  width:100%;
+}
+.email-input{
+  width:520px;
+  max-width:60%;
+  padding:16px 18px;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.45);
+  color:#fff;
+  font-size:16px;
+  outline:none;
+}
+.cta{
+  background:#e50914;
+  border:none;
+  color:white;
+  padding:14px 22px;
+  font-weight:700;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* Responsive tweaks */
+@media (max-width:800px){
+  .headline{font-size:36px;padding:0 12px}
+  .email-input{max-width:70%}
+  .logo{font-size:28px}
+}
